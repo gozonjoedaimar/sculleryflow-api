@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                sh 'corepack enable'
+                sh 'yarn'
+                sh 'yarn build'
                 sh 'touch .build_$(date +%Y%m%d%H%M%S)'
             }
         }
