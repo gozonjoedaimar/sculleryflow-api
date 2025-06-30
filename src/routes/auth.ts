@@ -28,8 +28,8 @@ router.post(route('login').path(), login);
 // POST /auth/logout
 router.post(route('logout').path(), logout);
 
-// POST /auth/user
-router.post(route('user').path(), getUser);
+// GET /auth/user
+router.get(route('user').path(), getUser);
 
 // POST /auth/register
 router.post(route('register').path(), register);
